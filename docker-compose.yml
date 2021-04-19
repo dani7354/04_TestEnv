@@ -12,23 +12,14 @@ services:
       - 56235:80
   simplewebtls_0:
     build: ./SimpleWebTls
-    volumes:
-      - ./SimpleWebTls/ssl:/etc/apache2/ssl
-      - ./SimpleWebTls/sites-available:/etc/apache2/sites-available
     ports:
       - 4576:443
   simplewebtlsi_1:
     build: ./SimpleWebTls
-    volumes:
-      - ./SimpleWebTls/ssl:/etc/apache2/ssl
-      - ./SimpleWebTls/sites-available:/etc/apache2/sites-available
     ports:
       - 57236:443
   simpleloginpage_0:
     build: ./WebLoginForm
-    volumes:
-      - ./WebLoginForm/ssl:/etc/apache2/ssl
-      - ./WebLoginForm/sites-available:/etc/apache2/sites-available
     ports:
       - 1597:443
 
