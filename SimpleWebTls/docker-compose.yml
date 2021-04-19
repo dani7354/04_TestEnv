@@ -1,0 +1,9 @@
+version: '3'
+services:
+  testapptls_0:
+    image: "testapptls:latest"
+    volumes:
+      - ./ssl:/etc/apache2/ssl
+      - ./sites-available:/etc/apache2/sites-available
+    ports:
+      - 8080:443
