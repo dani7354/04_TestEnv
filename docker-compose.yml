@@ -1,6 +1,4 @@
 version: '3'
-networks:
-  localnetwork:
 services:
   simpleweb_0:
     build: ./SimpleWeb

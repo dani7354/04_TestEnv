@@ -1,4 +1,6 @@
 *.crt
 *.key
-
+*.xlsx
+*.docx
 .DS_STORE
+
