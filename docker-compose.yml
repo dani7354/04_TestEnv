@@ -3,21 +3,28 @@ services:
   simpleweb_0:
     build: ./SimpleWeb
     ports:
-      - 9999:80
+      - "9999:80/tcp"
   simpleweb_1:
     build: ./SimpleWeb
     ports:
-      - 56235:80
+      - "56235:80/tcp"
   simplewebtls_0:
     build: ./SimpleWebTls
     ports:
-      - 4576:443
+      - "4576:443/tcp"
   simplewebtlsi_1:
     build: ./SimpleWebTls
     ports:
-      - 57236:443
+      - "57236:443/tcp"
   simpleloginpage_0:
     build: ./WebLoginForm
     ports:
-      - 1597:443
-
+      - "1597:443/tcp"
+  vulnssh_0:
+    build: ./VulnSsh
+    ports:
+      - "2223:22/tcp"
+  anonftp_0:
+    build: ./AnonFtp
+    ports:
+      - "2121:21/tcp"

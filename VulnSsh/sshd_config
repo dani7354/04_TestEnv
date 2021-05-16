@@ -1,0 +1,39 @@
+#	$OpenBSD: sshd_config,v 1.103 2018/04/09 20:41:22 tj Exp $
+
+Include /etc/ssh/sshd_config.d/*.conf
+
+Port 22
+ListenAddress 0.0.0.0
+
+
+# Ciphers and keying
+Ciphers  aes128-ctr,aes192-ctr,aes256-ctr,aes128-cbc,aes192-cbc,rijndael-cbc@lysator.liu.se,aes256-cbc,3des-cbc
+MACs hmac-md5,hmac-md5-96,hmac-sha1,hmac-sha1-96,umac-64@openssh.com
+
+# Authentication:
+LoginGraceTime 60m
+PermitRootLogin yes
+MaxAuthTries 999
+
+PubkeyAuthentication yes
+
+# To disable tunneled clear text passwords, change to no here!
+PasswordAuthentication yes
+PermitEmptyPasswords yes
+
+# Change to yes to enable challenge-response passwords (beware issues with
+# some PAM modules and threads)
+ChallengeResponseAuthentication no
+
+UsePAM yes
+
+X11Forwarding no
+PrintMotd no
+
+Banner "Hello!"
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# override default of no subsystems
+Subsystem	sftp	/usr/lib/openssh/sftp-server
