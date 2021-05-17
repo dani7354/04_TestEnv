@@ -10,5 +10,17 @@ The services are used as test environment for a Powershell module, which scans f
 * __WebLoginForm__: PHP Website using form-based authentication. (credentials: admin:123456789)
 
 ## Setup
+1. Clone the repository:
+   ```
+$ git clone --single-branch  https://github.com/dani7354/04_TestEnv.git
+   ```
+2. Open docker-compose.yml
+3. Add the services you wish to run. Make sure that the open TCP port from each service/container is forwarded to a TCP port on your host system
+
+## Run
+cd to the 04_TestEnv directory and run:
+```
+$ docker-compose up --build
+```
 
 
