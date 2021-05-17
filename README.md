@@ -18,7 +18,8 @@ $ git clone --single-branch  https://github.com/dani7354/04_TestEnv.git
 3. Add the services you wish to run. Make sure that the open TCP port from each service/container is forwarded to a TCP port on your host system
 
 ## Run
-cd to the 04_TestEnv directory and run:
+1. Verify that docker is installed and running
+2. Change directory (cd) to 04_TestEnv and run:
 ```
 $ docker-compose up --build
 ```
