@@ -2,7 +2,9 @@
 ## About
 Some Web, FTP and SSH services with weak usernames and passwords that can be deployed using docker-compose.
 
-The services are used as test environment for a Powershell module, which scans for services, tests them for access with default credentials and more!
+The services are used as test environment for my [Powershell module](https://github.com/dani7354/04_NmapCredentialsPsScript), which scans for services, tests them for access with default credentials and more!
+
+Services:
 * __AnonFtp__: ProFTPd with anonymous login and write access
 * __SimpleWeb__: Apache2 webserver with Basic Authentication (credentials: admin:admin) protecting the root directory
 * __SimpleWebTls__: Same as the one above, but this one is running over TLS (HTTPS)
