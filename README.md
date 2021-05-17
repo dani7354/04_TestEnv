@@ -13,7 +13,7 @@ Services:
 
 ## Setup
 1. Clone the repository:
-```
+...```
 $ git clone --single-branch  https://github.com/dani7354/04_TestEnv.git
 ```
 2. (Optional) Edit the Dockerfiles located in the service directories (e.g.: _VulnSsh/Dockerfile_) to suit your needs
