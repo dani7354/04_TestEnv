@@ -16,13 +16,14 @@ Services:
 ```
 $ git clone --single-branch  https://github.com/dani7354/04_TestEnv.git
 ```
-2. Open docker-compose.yml
-3. Add the services to build and run. Use the existing services as template, e.g.:
+2. (Optional) Edit the Dockerfiles located in the service directories (e.g.: _VulnSsh/Dockerfile_) to suit your needs
+3. Open docker-compose.yml
+4. Add the services to build and run. Use the existing services as template, e.g.:
 ```yaml
-  vulnssh_0:
-    build: ./VulnSsh
-    ports:
-      - "2223:22/tcp"
+vulnssh_0:
+  build: ./VulnSsh
+  ports:
+    - "2223:22/tcp"
 ```
  Make sure that the open TCP port from each service/container is forwarded to a TCP port on your host system
 
